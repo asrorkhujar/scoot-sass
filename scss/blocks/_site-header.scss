@@ -1,6 +1,6 @@
 /* SITE-HEADER */
 .site-header {
-  position: fixed;
+  // position: fixed;
   z-index: 99;
   left: 0;
   top: 0;
@@ -39,7 +39,7 @@
 
 
 /* RESPONSIVENESS */
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 768px) {
    .site-header--open {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.75);
@@ -100,5 +100,19 @@
 
   .site-header__button {
     margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .site-header--open .site-header__off-canvas {
+    position: absolute;
+    left: 0;
+    top: 59px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 59px);
+    padding: 32px;
+    padding-top: 64px;
+    transform: initial;
   }
 }
