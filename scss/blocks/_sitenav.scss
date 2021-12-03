@@ -26,15 +26,16 @@
 .sitenav__link {
   color: $dim-grey;
   transition: color 0.3s ease;
+
+  &:hover {
+    color: $yellow;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
-.sitenav__link:hover {
-  color: $yellow;
-}
-
-.sitenav__link:active {
-  opacity: 0.6;
-}
 
 
 @media only screen and (max-width: 650px) {

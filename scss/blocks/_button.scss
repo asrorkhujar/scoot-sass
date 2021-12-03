@@ -12,15 +12,16 @@
   background-color: $yellow;
   color: $white;
   white-space: nowrap;
-  transition: color 0.3s ease;
-}
+  transition: 0.3s ease;
+  transition-property: color background-color;
 
-.button:hover {
-  border-color: $yellow;
-  background-color: transparent;
-  color: $yellow;
-}
+  &:hover {
+    border-color: $yellow;
+    background-color: transparent;
+    color: $yellow;
+  }
 
-.button:active {
-  opacity: 0.6;
+  &:active {
+    opacity: 0.6;
+  }
 }
