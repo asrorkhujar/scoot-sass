@@ -1,0 +1,111 @@
+/* FEATURES */
+.features{
+  padding-top: 150px;
+  padding-bottom: 180px;
+}
+
+.features__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 160px;
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.features__box-inner {
+  width: 445px;
+}
+.features__title {
+  color: $dark-navy;
+  margin-bottom: 24px;
+}
+.features__desc {
+  color: $dim-grey;
+  margin-bottom: 40px;
+}
+
+.features__img-box {
+  position: relative;
+  z-index: 1;
+
+  &::before{
+    content: "";
+    position: absolute;
+    left: -130px;
+    bottom: 0;
+    z-index: 10;
+    width: 735px;
+    height: 140px;
+    background-image: url("../img/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &::after{
+    content: "";
+    position: absolute;
+    right:  -110%;
+    bottom: 0;
+    z-index: 1;
+    width: 445px;
+    height: 445px;
+    background-image: url("../img/grey-circle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.features__img-box--city::before{
+  content: "";
+  position: absolute;
+  left: -118%;
+  top: 0;
+  z-index: 10;
+  width: 735px;
+  height: 140px;
+  background-image: url("../img/arrow-left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.features__img-box--city::after{
+  content: "";
+  position: absolute;
+  right:  115%;
+  bottom: 0;
+  z-index: 1;
+  width: 445px;
+  height: 445px;
+  background-image: url("../img/grey-circle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.features__img-payments{
+  border-radius: 50%;
+}
+
+.features__img-box--payments::before{
+  content: "";
+  position: absolute;
+  left: 235px;
+  top: 66px;
+  z-index: 10;
+  width: 735px;
+  height: 140px;
+  background-image: url("../img/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

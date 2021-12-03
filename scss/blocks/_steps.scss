@@ -1,15 +1,11 @@
 // STEPS
 .steps{
   padding-top: 160px;
-  background-image: url("../../img/grey-line.svg");
-  background-size: 924px 15px;
-  background-repeat: no-repeat;
-  background-position: calc(50% - 250px) calc(50% - 17px);
 }
 
 .steps__list {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   @include list-unstyled;
 }
@@ -22,12 +18,13 @@
 }
 
 .steps__item{
-
+  position: relative;
+  z-index: 1;
   &:not(:last-child){
     margin-right: 30px;
   }
 
-  &::before{
+  &::before {
     content: "";
     display: block;
     width: 96px;
@@ -37,6 +34,20 @@
     background-position: center;
     background-size: contain;
     margin-bottom: 40px;
+    position: relative;
+    z-index: 10;
+  }
+
+  &::after {
+    content: "";
+    top: 48px;
+    right: 100%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 15px;
+    background-color: $light-grey;
+    position: absolute;
+    z-index: -1;
   }
 }
 
@@ -60,15 +71,14 @@
 @media only screen and (max-width: 768px) {
   .steps{
     padding-top: 122px;
-    background-image: url("../../img/vertical-line.svg");
-    background-size: 15px 600px;
-    background-repeat: no-repeat;
-    background-position: calc(50% - 230px) calc(50% - 94px);
-
   }
 
   .steps__list {
     flex-direction: column;
+  }
+
+  .steps__item-wrapper {
+    max-width: 400px;
   }
 
   .steps__item {
@@ -84,4 +94,5 @@
       margin-right: 80px;
     }
   }
+
 }

@@ -1,0 +1,41 @@
+/* APP-MARKET */
+.app-market {
+  padding: 102px 0;
+  background-color: $dark-navy;
+  background-image: url("../img/three-big-circle.svg");
+  background-repeat: no-repeat;
+  background-size: 1153px 347px;
+  background-position: calc(50% + 300px) 130px;
+}
+
+.app-market__container{
+  display: flex;
+  align-items: center;
+}
+
+.app-market__title {
+  width: 415px;
+  margin: 0;
+  font-family: "Space Mono";
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -2.14286px;
+  color: $--white;
+  margin-right: auto;
+}
+
+.app-market__list {
+  display: flex;
+  align-items: center;
+
+  @include list-unstyled;
+}
+
+.app-market__item:not(:last-child) {
+  margin-right: 18px;
+}
+
+.app-market__img {
+  display: block;
+}
