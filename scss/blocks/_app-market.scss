@@ -14,14 +14,9 @@
 }
 
 .app-market__title {
+  margin-bottom: 0;
   width: 415px;
-  margin: 0;
-  font-family: "Space Mono";
-  font-weight: bold;
-  font-size: 48px;
-  line-height: 48px;
-  letter-spacing: -2.14286px;
-  color: $--white;
+  color: $white;
   margin-right: auto;
 }
 
@@ -38,4 +33,40 @@
 
 .app-market__img {
   display: block;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .app-market {
+    padding: 62px 0;
+    background-position: calc(50% + 30px) 130px;
+  }
+
+  .app-market__container{
+    flex-direction: column;
+  }
+
+  .app-market__title {
+    margin-right: 0;
+    margin-bottom: 40px;
+    text-align: center;
+
+  }
+
+}
+
+
+@media only screen and (max-width: 576px) {
+  .app-market {
+    padding: 88px 0;
+    background-position: calc(50% - 200px) 130px;
+  }
+
+  .app-market__title {
+    max-width: 311px;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -1.42857px;
+  }
 }

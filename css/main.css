@@ -1054,7 +1054,7 @@ a {
 /* APP-MARKET */
 .app-market {
   padding: 102px 0;
-  background-color: var(--dark-navy);
+  background-color: #495567;
   background-image: url("../img/three-big-circle.svg");
   background-repeat: no-repeat;
   background-size: 1153px 347px;
@@ -1067,23 +1067,18 @@ a {
 }
 
 .app-market__title {
+  margin-bottom: 0;
   width: 415px;
-  margin: 0;
-  font-family: "Space Mono";
-  font-weight: bold;
-  font-size: 48px;
-  line-height: 48px;
-  letter-spacing: -2.14286px;
-  color: var(--white);
+  color: #fff;
   margin-right: auto;
 }
 
 .app-market__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   display: flex;
   align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .app-market__item:not(:last-child) {
@@ -1092,6 +1087,34 @@ a {
 
 .app-market__img {
   display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .app-market {
+    padding: 62px 0;
+    background-position: calc(50% + 30px) 130px;
+  }
+  .app-market__container {
+    flex-direction: column;
+  }
+  .app-market__title {
+    margin-right: 0;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .app-market {
+    padding: 88px 0;
+    background-position: calc(50% - 200px) 130px;
+  }
+  .app-market__title {
+    max-width: 311px;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -1.42857px;
+  }
 }
 
 /* FOOTER */
