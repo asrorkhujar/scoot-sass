@@ -30,6 +30,35 @@ img {
   height: auto;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-family: $heading-font-stack;
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 56px;
+  letter-spacing: -2.5px;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -2.14px;
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -1.79px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1.07px;
+}
+
 a {
   text-decoration: none;
 }
