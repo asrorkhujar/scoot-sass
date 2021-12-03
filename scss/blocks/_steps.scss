@@ -1,0 +1,53 @@
+// STEPS
+.steps{
+  padding-top: 160px;
+  padding-bottom: 75px;
+  background-image: url("../img/grey-line.svg");
+  background-size: 924px 15px;
+  background-repeat: no-repeat;
+  background-position: calc(50% - 250px) calc(50% - 60px);
+
+}
+.steps__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.steps__item {
+  width: 350px;
+
+  &:not(:last-child){
+    margin-right: 30px;
+  }
+
+  &::before{
+    content: "";
+    display: block;
+    width: 96px;
+    height: 96px;
+    background-image: url("../img/icon-calculator.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-bottom: 40px;
+  }
+}
+
+.steps__item--bike::before{
+  background-image: url("../img/icon-bike.svg");
+}
+.steps__item--speedbike::before{
+  background-image: url("../img/icon-speed-bike.svg");
+}
+
+.steps__item-title {
+
+
+  color: $dark-navy;
+  margin-bottom: 27px;
+}
+.steps__item-desc {
+  color: $dim-grey;
+}
