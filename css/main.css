@@ -844,23 +844,25 @@ a {
 
 .steps {
   padding-top: 160px;
-  padding-bottom: 75px;
-  background-image: url("../img/grey-line.svg");
+  background-image: url("../../img/grey-line.svg");
   background-size: 924px 15px;
   background-repeat: no-repeat;
-  background-position: calc(50% - 250px) calc(50% - 60px);
+  background-position: calc(50% - 250px) calc(50% - 17px);
 }
 
 .steps__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.steps__item {
-  width: 350px;
+.steps__item-wrapper {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .steps__item:not(:last-child) {
@@ -872,19 +874,19 @@ a {
   display: block;
   width: 96px;
   height: 96px;
-  background-image: url("../img/icon-calculator.svg");
+  background-image: url("../../img/icon-calculator.svg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: contain;
   margin-bottom: 40px;
 }
 
 .steps__item--bike::before {
-  background-image: url("../img/icon-bike.svg");
+  background-image: url("../../img/icon-bike.svg");
 }
 
 .steps__item--speedbike::before {
-  background-image: url("../img/icon-speed-bike.svg");
+  background-image: url("../../img/icon-speed-bike.svg");
 }
 
 .steps__item-title {
@@ -893,7 +895,32 @@ a {
 }
 
 .steps__item-desc {
+  margin: 0;
   color: #939CAA;
+}
+
+@media only screen and (max-width: 768px) {
+  .steps {
+    padding-top: 122px;
+    background-image: url("../../img/vertical-line.svg");
+    background-size: 15px 600px;
+    background-repeat: no-repeat;
+    background-position: calc(50% - 230px) calc(50% - 94px);
+  }
+  .steps__list {
+    flex-direction: column;
+  }
+  .steps__item {
+    display: flex;
+    align-items: flex-start;
+  }
+  .steps__item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .steps__item::before {
+    margin-bottom: 0;
+    margin-right: 80px;
+  }
 }
 
 /* FOOTER */
