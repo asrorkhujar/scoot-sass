@@ -96,3 +96,33 @@
   }
 
 }
+
+@media only screen and (max-width: 475px) {
+  .steps__list {
+    align-items: initial;
+  }
+
+  .steps__item {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    &::before {
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .steps__item-wrapper {
+    max-width: 311px;
+    align-items: initial;
+  }
+
+  .steps__item-title {
+    margin-bottom: 24px;
+  }
+}

@@ -937,10 +937,36 @@ a {
   }
 }
 
+@media only screen and (max-width: 475px) {
+  .steps__list {
+    align-items: initial;
+  }
+  .steps__item {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .steps__item::before {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+  .steps__item::after {
+    display: none;
+  }
+  .steps__item-wrapper {
+    max-width: 311px;
+    align-items: initial;
+  }
+  .steps__item-title {
+    margin-bottom: 24px;
+  }
+}
+
 /* FEATURES */
 .features {
   padding-top: 150px;
   padding-bottom: 180px;
+  overflow-x: hidden;
 }
 
 .features__box {
@@ -994,12 +1020,13 @@ a {
 .features__img-box::after {
   content: "";
   position: absolute;
-  right: -110%;
-  bottom: 0;
+  right: calc(50% - 500px);
+  bottom: 50%;
+  transform: translate(50%, 50%);
   z-index: 1;
   width: 445px;
   height: 445px;
-  background-image: url("../img/grey-circle.svg");
+  background-image: url(../img/grey-circle.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1022,12 +1049,13 @@ a {
 .features__img-box--city::after {
   content: "";
   position: absolute;
-  right: 115%;
-  bottom: 0;
+  left: calc(50% - 500px);
+  bottom: 50%;
+  transform: translate(-50%, 50%);
   z-index: 1;
   width: 445px;
   height: 445px;
-  background-image: url("../img/grey-circle.svg");
+  background-image: url(../img/grey-circle.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1049,6 +1077,58 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+@media only screen and (max-width: 768px) {
+  .features {
+    padding-bottom: 104px;
+  }
+  .features__box {
+    flex-direction: column !important;
+  }
+  .features__box:not(:last-child) {
+    margin-bottom: 128px;
+  }
+  .features__box-inner {
+    order: 2;
+    text-align: center;
+  }
+  .features__img-box {
+    margin-bottom: 56px;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .features {
+    padding-bottom: 120px;
+  }
+  .features__box:not(:last-child) {
+    margin-bottom: 120px;
+  }
+  .features__title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .features__img-box img {
+    width: 311px;
+    height: 311px;
+  }
+  .features__img-box::after {
+    display: none;
+  }
+  .features__img-box--city::before {
+    left: -145%;
+  }
+  .features__img-box--use::before {
+    left: -30px;
+  }
+  .features__img-box--payments::before {
+    left: 34px;
+    top: 15px;
+  }
+  .features__box-inner {
+    max-width: 311px;
+  }
 }
 
 /* APP-MARKET */
