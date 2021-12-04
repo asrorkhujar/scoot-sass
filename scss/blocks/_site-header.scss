@@ -42,7 +42,7 @@
 @media only screen and (max-width: 768px) {
    .site-header--open {
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: #fff;
   }
 
   .site-header__top {
@@ -83,10 +83,6 @@
 
   .site-header__off-canvas {
     display: none;
-    background-color: #333a44;
-  }
-
-  .site-header--open .site-header__off-canvas {
     position: absolute;
     left: 0;
     top: 69px;
@@ -95,6 +91,12 @@
     height: calc(100vh - 69px);
     padding: 32px;
     padding-top: 64px;
+    background-color: #333a44;
+    transform: translateX(-105%);
+    transition: transform .3s;
+  }
+
+  .site-header--open .site-header__off-canvas {
     transform: initial;
   }
 

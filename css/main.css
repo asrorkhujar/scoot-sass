@@ -492,7 +492,7 @@ a {
 @media only screen and (max-width: 768px) {
   .site-header--open {
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: #fff;
   }
   .site-header__top {
     margin-right: 0;
@@ -528,9 +528,6 @@ a {
   }
   .site-header__off-canvas {
     display: none;
-    background-color: #333a44;
-  }
-  .site-header--open .site-header__off-canvas {
     position: absolute;
     left: 0;
     top: 69px;
@@ -539,6 +536,11 @@ a {
     height: calc(100vh - 69px);
     padding: 32px;
     padding-top: 64px;
+    background-color: #333a44;
+    transform: translateX(-105%);
+    transition: transform .3s;
+  }
+  .site-header--open .site-header__off-canvas {
     transform: initial;
   }
   .site-header__button {
@@ -863,7 +865,6 @@ a {
 
 .steps__item {
   position: relative;
-  z-index: 1;
 }
 
 .steps__item:not(:last-child) {
@@ -917,6 +918,7 @@ a {
 @media only screen and (max-width: 768px) {
   .steps {
     padding-top: 122px;
+    overflow: hidden;
   }
   .steps__list {
     flex-direction: column;
@@ -931,13 +933,24 @@ a {
   .steps__item:not(:last-child) {
     margin-bottom: 40px;
   }
+  .steps__item::after {
+    content: "";
+    left: 48px;
+    top: -94%;
+    transform: translate(-50%, 0%);
+    width: 15px;
+    height: 200px;
+    background-color: #E5ECF4;
+    position: absolute;
+  }
   .steps__item::before {
     margin-bottom: 0;
     margin-right: 80px;
+    flex-shrink: 0;
   }
 }
 
-@media only screen and (max-width: 475px) {
+@media only screen and (max-width: 500px) {
   .steps__list {
     align-items: initial;
   }
