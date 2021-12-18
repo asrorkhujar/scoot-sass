@@ -533,7 +533,7 @@ a {
     top: 69px;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 69px);
+    height: calc(100vh - 60px);
     padding: 32px;
     padding-top: 64px;
     background-color: #333a44;
@@ -558,7 +558,7 @@ a {
     top: 60px;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 59px);
+    height: calc(100vh - 60px);
     padding: 32px;
     padding-top: 64px;
     transform: initial;
