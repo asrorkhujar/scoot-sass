@@ -106,10 +106,14 @@
 }
 
 @media only screen and (max-width: 576px) {
+  .site-header__off-canvas {
+    top: 60px;
+  }
+
   .site-header--open .site-header__off-canvas {
     position: absolute;
     left: 0;
-    top: 59px;
+    top: 60px;
     display: flex;
     flex-direction: column;
     height: calc(100vh - 59px);
